@@ -1,0 +1,154 @@
+body.custom-background {
+    background-color: #fff;
+}
+
+#global-footer-content {
+    background: #555;
+}
+
+.menu-toggle::before {
+    border: 1px solid #888;
+    color: #888;
+    content: "\f419";
+    font-family: "Genericons" !important;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    /* padding: 5px; */
+}
+
+.page-template-default .aboutpage .cd-fixed-bg-one .overlay,
+.page-template-default .aboutpage .cd-fixed-bg-one {
+    height: 20vw;
+}
+
+.aboutpage .cd-fixed-bg-one .entry-content {
+    bottom: -80%;
+    text-align: left;
+    top: auto;
+}
+
+@media all and (max-width:955px) {
+    #secondary {
+        margin-top: -60px;
+    }
+
+    .page-template-default .aboutpage .cd-fixed-bg-one {
+        align-items: center;
+        display: flex;
+        padding: 0;
+    }
+
+    .aboutpage .cd-fixed-bg-one .entry-content {
+        bottom: 0;
+    }
+}
+
+.home .themes-intro,
+.home .entry-content h1 {
+    left: -1000em;
+    position: absolute;
+}
+
+.home .aboutpage .cd-fixed-bg-one .overlay,
+.aboutpage .cd-fixed-bg-one hr.short {
+    display: none;
+}
+
+.sidebar .widget {
+    background: #e9e9e9;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+}
+
+main article a,
+#et-boc h2.entry-title a {
+    text-decoration: none;
+}
+
+/* Begin Interior Page Layout Styles */
+.interior .cd-fixed-bg-one .overlay {
+    background: rgba(0, 0, 0, .6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: .7;
+}
+
+.interior .cd-fixed-bg-one h1 {
+    color: #fff;
+    font-size: 60px;
+    font-size: 6rem;
+    margin-bottom: 0;
+    z-index: 100;
+    position: relative;
+}
+
+.page-template-interior-page .interior .cd-fixed-bg-one .overlay,
+.page-template-interior-page .interior .cd-fixed-bg-one {
+    height: 15vw;
+}
+
+.page-template-interior-page .interior .cd-fixed-bg-one {
+    padding: 40px 0;
+}
+
+.interior .cd-fixed-bg-one .entry-content {
+    color: #fff;
+    z-index: 100;
+    position: relative;
+}
+
+.interior .cd-fixed-bg-one .entry-content {
+    bottom: -80%;
+    text-align: left;
+    top: auto;
+}
+
+.page-template-interior-page .default-page .site-content {
+    padding-top: 4%;
+}
+
+.interior .cd-fixed-bg-one hr.short {
+    background-color: #fff;
+    max-width: 50px;
+    height: 1px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 100 !important;
+    display: block;
+}
+
+.home .interior .cd-fixed-bg-one .overlay,
+.interior .cd-fixed-bg-one hr.short {
+    display: none;
+}
+
+.interior .cd-fixed-bg-one {
+    padding: 80px 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #333;
+}
+
+@media all and (max-width:955px) {
+    .page-template-interior-page .interior .cd-fixed-bg-one {
+        align-items: center;
+        display: flex;
+        padding: 0;
+    }
+
+    .interior .cd-fixed-bg-one .entry-content {
+        bottom: 0;
+    }
+}
+
+/* End Interior Page Layout Styles */
