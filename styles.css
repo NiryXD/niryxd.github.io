@@ -7,15 +7,16 @@
 
 /* ---------- UTK Logo Path Fixes ---------- */
 /* v2019.css uses ../images/interface/ which resolves outside the project.
-   These overrides fix the paths to use local copies. */
+   These overrides fix the paths to use local copies.
+   IMPORTANT: Folder is "Images" (capital I) — GitHub Pages is case-sensitive. */
 header[role=banner] h1.ut-title a {
-  background: url(./images/interface/logo-left.svg) !important;
+  background: url(./Images/interface/logo-left.svg) !important;
   background-repeat: no-repeat !important;
   background-position: 0 !important;
   background-size: 255px 48px !important;
 }
 
 p.system {
-  background: url(./images/interface/winged-ut.png) no-repeat !important;
+  background: url(./Images/interface/winged-ut.png) no-repeat !important;
   padding-left: 30px;
 }
