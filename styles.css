@@ -1,0 +1,364 @@
+/* ============================================
+   Dr. Xiao's Research Lab — Team Page Styles
+   Inspired by UTK Healthy Families Research
+   ============================================ */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --utk-orange: #FF8200;
+  --utk-orange-dark: #E07000;
+  --utk-smokey: #58595B;
+  --utk-white: #FFFFFF;
+  --utk-light-gray: #F5F5F5;
+  --utk-dark: #1D1D1D;
+  --utk-navy: #13294B;
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --radius: 6px;
+  --transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--utk-dark);
+  background-color: var(--utk-white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background-color: var(--utk-navy);
+  color: var(--utk-white);
+  border-bottom: 4px solid var(--utk-orange);
+}
+
+.header-top {
+  background-color: var(--utk-orange);
+  padding: 6px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.header-top a {
+  color: var(--utk-white);
+}
+
+.header-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.site-title a {
+  color: var(--utk-white);
+}
+
+.site-title span {
+  color: var(--utk-orange);
+}
+
+/* ---------- Navigation ---------- */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.main-nav a {
+  color: var(--utk-white);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--utk-orange);
+}
+
+/* ---------- Page Title Banner ---------- */
+.page-title {
+  background: linear-gradient(135deg, var(--utk-navy), #1a3560);
+  color: var(--utk-white);
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.page-title h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.page-title .subtitle {
+  font-size: 1.05rem;
+  opacity: 0.8;
+}
+
+/* ---------- Content Container ---------- */
+.content-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+/* ---------- Section Separator ---------- */
+.separator {
+  border: none;
+  border-top: 2px solid #E0E0E0;
+  margin: 0 0 40px;
+}
+
+/* ---------- Lab Director Section ---------- */
+.director-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.director-photo {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.director-photo img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+}
+
+.director-info {
+  flex: 1;
+}
+
+.director-info h3 {
+  font-size: 1.5rem;
+  color: var(--utk-navy);
+  margin-bottom: 4px;
+}
+
+.director-info .role {
+  font-style: italic;
+  color: var(--utk-orange);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.director-info p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--utk-smokey);
+}
+
+/* ---------- Section Header ---------- */
+.section-header {
+  font-size: 1.4rem;
+  color: var(--utk-navy);
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--utk-orange);
+  display: inline-block;
+}
+
+/* ---------- Team Members Grid ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.team-card {
+  background: var(--utk-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.team-card .photo-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.team-card .photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.team-card:hover .photo-wrap img {
+  transform: scale(1.03);
+}
+
+/* ---------- Accordion ---------- */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background-color: var(--utk-light-gray);
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--utk-navy);
+  transition: background var(--transition);
+  border-top: 1px solid #E0E0E0;
+}
+
+.accordion-header:hover {
+  background-color: #ECECEC;
+}
+
+.accordion-header .chevron {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+  fill: var(--utk-smokey);
+}
+
+.accordion-header.open .chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 18px;
+  background-color: var(--utk-white);
+}
+
+.accordion-body.open {
+  max-height: 400px;
+  padding: 16px 18px;
+}
+
+.accordion-body p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--utk-smokey);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--utk-navy);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--utk-orange);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .director-section {
+    flex-direction: column;
+  }
+
+  .director-photo {
+    flex: none;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-main {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .director-photo {
+    max-width: 80%;
+  }
+}
+
+/* ---------- UTK Logo Path Fixes ---------- */
+/* v2019.css uses ../images/interface/ which resolves outside the project.
+   These overrides fix the paths to use local copies. */
+header[role=banner] h1.ut-title a {
+  background: url(./images/interface/logo-left.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 !important;
+  background-size: 255px 48px !important;
+}
+
+p.system {
+  background: url(./images/interface/winged-ut.png) no-repeat !important;
+  padding-left: 30px;
+}
